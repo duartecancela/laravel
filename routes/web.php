@@ -15,11 +15,11 @@ use Psy\Command\WhereamiCommand;
 */
 
 Route::get('/', function () {
-    return 'Home Page';
+    return view('home.index', []);
 })->name('home.index');
 
 Route::get('/contact', function() {
-    return 'Contact';
+    return view('home.contact', []);
 })->name('home.contact');
 
 Route::get('/posts/{id}', function ($id) {
