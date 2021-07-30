@@ -27,9 +27,7 @@ Route::view('/', 'home.index')
 Route::view('/contact', 'home.contact')
     ->name('home.contact');
 
-Route::get('/posts/{id}', function ($id) {
-
-    $posts = [
+$posts = [
     1 => [
         'title' => 'Intro to Laravel',
         'content' => 'This is a short intro to Laravel',
@@ -43,6 +41,13 @@ Route::get('/posts/{id}', function ($id) {
     
     ]
 ];
+
+Route::get('/posts', function() use($posts) {
+    return view('posts.index', ['posts' => $posts]);
+});
+
+Route::get('/posts/{id}', function ($id) use ($posts) {
+
 
 abort_if(!isset($posts[$id]), 404);
 
