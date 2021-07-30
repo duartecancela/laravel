@@ -39,6 +39,12 @@ $posts = [
         'content' => 'This is a short intro to PHP',
         'is_new' => false,
     
+    ],
+    3 => [
+        'title' => 'Intro to GoLang',
+        'content' => 'This is a short intro to GoLang',
+        'is_new' => false,
+    
     ]
 ];
 
